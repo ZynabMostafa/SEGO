@@ -84,7 +84,7 @@ fun ProfileImage(text: String) {
         ) {
             Image(
                 bitmap = bitmap.value.asImageBitmap(),
-                contentDescription = null,
+                contentDescription = "Image",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .clip(CircleShape)
@@ -177,7 +177,7 @@ fun ProfileImage(text: String) {
                             modifier = Modifier.padding(
                                 start = 45.dp,
                                 bottom = 80.dp,
-                                end = 8.dp
+                                end = 10.dp
                             )
                         ) {
                             Text(

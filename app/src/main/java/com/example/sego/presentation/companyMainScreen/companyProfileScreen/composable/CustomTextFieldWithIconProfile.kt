@@ -47,12 +47,11 @@ fun CustomTextFieldWithIconProfile(
                 },
                 shape = RoundedCornerShape(26.dp),
                 modifier = Modifier
-                    .padding(top = 6.dp, start = 40.dp, end = 30.dp),
+                    .padding(top = 6.dp, start = 30.dp, end = 30.dp),
                 trailingIcon = {
                     IconButton(onClick = { isEditing = false }) {
                         Icon(
                             Icons.Filled.Done,
-                            //  painter = painterResource(id = R.drawable.baseline_edit_24),
                             contentDescription = null
                         )
                     }

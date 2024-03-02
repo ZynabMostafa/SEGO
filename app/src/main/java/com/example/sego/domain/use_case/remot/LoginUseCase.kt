@@ -1,10 +1,9 @@
 package com.example.sego.domain.use_case.remot
 
 import com.example.sego.data.dto.UserRequest
-import com.example.sego.data.dto.loginResponseDto
+import com.example.sego.data.dto.LoginResponseDto
 import com.example.sego.domain.reposatory.remot.RemoteRepository
 import com.example.sego.utils.Resource
-import retrofit2.Response
 import javax.inject.Inject
 
 class LoginUseCase @Inject constructor(
@@ -12,7 +11,7 @@ class LoginUseCase @Inject constructor(
 ) {
     suspend operator fun invoke(
         userRequest: UserRequest
-    ):Resource<loginResponseDto , String>{
+    ):Resource<LoginResponseDto , String>{
         return remoteRepository.login(userRequest)
      }
 

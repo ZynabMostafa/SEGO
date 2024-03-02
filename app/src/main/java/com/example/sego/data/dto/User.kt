@@ -1,13 +1,24 @@
 package com.example.sego.data.dto
 
+import com.google.gson.annotations.SerializedName
+
 data class User(
+    @SerializedName("country")
     val country: String,
-    val created_at: String,
+    @SerializedName("created_at")
+    val createdAt: String,
+    @SerializedName("email")
     val email: String,
-    val email_verified_at: Any,
+    @SerializedName("email_verified_at")
+    val emailVerifiedAt: Any,
+    @SerializedName("id")
     val id: Int,
+    @SerializedName("image")
     val image: String,
+    @SerializedName("name")
     val name: String,
+    @SerializedName("phone")
     val phone: String,
-    val updated_at: String
+    @SerializedName("updated_at")
+    val updatedAt: String
 )

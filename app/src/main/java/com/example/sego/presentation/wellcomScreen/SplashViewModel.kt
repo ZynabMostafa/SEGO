@@ -5,7 +5,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.sego.data.Repository.local.DataStoreRepo
+import com.example.sego.data.Repository.DataStoreRepo
 import com.example.sego.navigation.Graph
 import kotlinx.coroutines.launch
 import javax.inject.Inject

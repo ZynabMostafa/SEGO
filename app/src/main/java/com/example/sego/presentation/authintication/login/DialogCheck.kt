@@ -17,11 +17,11 @@ import com.example.sego.navigation.AuthScreenRouts
 @Composable
 fun CheckDialog(
     navController: NavController,
-    visable: Boolean = false,
-    onDismis: () -> Unit
+    visible: Boolean = false,
+    onDismiss: () -> Unit
 ) {
-    if (visable) {
-        AlertDialog(onDismissRequest = { onDismis() },
+    if (visible) {
+        AlertDialog(onDismissRequest = { onDismiss() },
             confirmButton = {
                 OutlinedButton(onClick = {
                     navController.navigate(AuthScreenRouts.SignUpUser.rout) {

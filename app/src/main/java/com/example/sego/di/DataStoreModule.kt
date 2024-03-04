@@ -1,7 +1,7 @@
 package com.example.sego.di
 
 import android.content.Context
-import com.example.sego.data.Repository.local.DataStoreRepo
+import com.example.sego.data.Repository.DataStoreRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 
-object WellcomModule {
+object DataStoreModule {
     @Provides
     @Singleton
     fun provideDataStoreRepository(

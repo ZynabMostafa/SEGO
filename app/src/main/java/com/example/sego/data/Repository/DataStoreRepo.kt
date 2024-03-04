@@ -1,4 +1,4 @@
-package com.example.sego.data.Repository.local
+package com.example.sego.data.Repository
 
 import android.content.Context
 import androidx.datastore.core.DataStore

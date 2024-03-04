@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.sego.R
 import com.example.sego.navigation.AuthScreenRouts
-import com.example.sego.navigation.MainScreenRouts
 import com.example.sego.ui.theme.basicColor
 
 
@@ -37,10 +36,7 @@ fun ChatScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(30.dp))
         Button(
             onClick = {
-                navController.navigate(AuthScreenRouts.Login.rout) {
-
-                    launchSingleTop
-                }
+                navController.navigate(AuthScreenRouts.Login.rout)
             },
             colors = ButtonDefaults.buttonColors(basicColor)
         ) {

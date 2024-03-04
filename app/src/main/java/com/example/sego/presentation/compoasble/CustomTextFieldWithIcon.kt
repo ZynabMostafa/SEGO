@@ -43,7 +43,8 @@ fun CustomTextFieldWithIcon(
             Text(text = label)
 
         }, shape = RoundedCornerShape(0.dp, 15.dp, 15.dp, 0.dp),
-            modifier = Modifier.padding(top = 2.dp)
+            modifier = Modifier.padding(top = 2.dp),
+            singleLine =true
         )
     }
 }

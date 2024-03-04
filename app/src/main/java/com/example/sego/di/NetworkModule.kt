@@ -15,7 +15,7 @@ object NetworkModule {
     @Singleton
     @Provides
    fun provideAuthenticationApi(): ApiService {
-        return Retrofit.Builder().baseUrl("https://sgeo.mimusoft.com/api")
+        return Retrofit.Builder().baseUrl("https://sgeo.mimusoft.com/api/")
             .addConverterFactory(GsonConverterFactory.create()).build()
             .create(ApiService::class.java)
     }

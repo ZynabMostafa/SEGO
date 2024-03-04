@@ -77,7 +77,7 @@ fun Login(
         Divider(
             Modifier
                 .height(2.dp)
-                .width(115.dp)
+                .width(135.dp)
         )
         Spacer(modifier = Modifier.height(20.dp))
         Row {

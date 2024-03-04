@@ -4,7 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
@@ -24,7 +26,7 @@ fun CustomTextFieldWithIcon(
     onValueChanged: (String) -> Unit,
     icon: ImageVector,
     label: String,
-
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default
 
     ) {
     Row(horizontalArrangement = Arrangement.Center) {
@@ -43,7 +45,10 @@ fun CustomTextFieldWithIcon(
             Text(text = label)
 
         }, shape = RoundedCornerShape(0.dp, 15.dp, 15.dp, 0.dp),
-            modifier = Modifier.padding(top = 2.dp)
+            modifier = Modifier.padding(top = 2.dp).width(300.dp)
+            ,
+            singleLine = true ,
+         keyboardOptions = keyboardOptions
         )
     }
 }

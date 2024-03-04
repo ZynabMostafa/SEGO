@@ -20,21 +20,17 @@ class LoginViewModel @Inject constructor
     var _email = mutableStateOf("")
     var _password = mutableStateOf("")
 
-    init {
-        login_(userRequest = UserRequest(_email.value,_password.value))
-    }
 
-      private fun login_ (userRequest: UserRequest){
+
+      fun login_ (userRequest: UserRequest){
           viewModelScope.launch {
               loginUseCase(userRequest).let { result ->
                   when(result){
                       is Resource.Error->{
-
                         _loginState.value= LoginState(isLoading = false)
-                          _loginState.value = LoginState(error = "invalid login")
+                          _loginState.value = LoginState(error = result.message)
                       }
                       is Resource.Success ->{
-
                           _loginState.value = LoginState(isLoading = false)
                           _loginState.value = LoginState(value = result.data)
 

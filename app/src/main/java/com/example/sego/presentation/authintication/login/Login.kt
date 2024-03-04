@@ -2,6 +2,7 @@ package com.example.sego.presentation.authintication.login
 
 import android.content.Context
 import android.widget.Toast
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.Email
 import androidx.compose.material.icons.twotone.Lock
@@ -24,10 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.sego.data.dto.UserRequest
 import com.example.sego.presentation.compoasble.CustomButton
 import com.example.sego.presentation.compoasble.CustomTextFieldWithIcon
 import com.example.sego.presentation.compoasble.HeaderImage
@@ -55,18 +59,34 @@ fun Login(
                 loginViewModel.setEmail(newEmail)
             },
             icon = Icons.TwoTone.Email,
-            label = "Email"
+            label = "Email",
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
         )
         Spacer(modifier = Modifier.height(20.dp))
         CustomTextFieldWithIcon(
             value = loginViewModel._password.value,
             onValueChanged = { newPassword -> loginViewModel.setPassword(newPassword) },
             icon = Icons.TwoTone.Lock,
-            label = "Password"
+            label = "Password",
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
+        AnimatedVisibility(visible = loginViewModel.loginState.value.showErrorMesage) {
+            Text(text = loginViewModel.loginState.value.error)
+
+        }
         Spacer(modifier = Modifier.height(30.dp))
         CustomButton(text = "Login") {
-            Toast.makeText(context, "you are logged in", Toast.LENGTH_SHORT).show()
+            loginViewModel.login_(
+                UserRequest(
+                    loginViewModel._email.value,
+                    loginViewModel._password.value
+                )
+            )
+            if (loginViewModel.loginState.value.value?.status == "success") {
+                Toast.makeText(context, "you are logged in", Toast.LENGTH_SHORT).show()
+                return@CustomButton
+            }
+            loginViewModel.loginState.value.showErrorMesage = true
         }
 
         Text(text = "Forgot Password?")
@@ -102,8 +122,11 @@ fun Login(
             Text(text = "Signup")
         }
 
-        CheckDialog(navController = navController, visible = loginViewModel.loginState.value.dilogeVisabitlity) {
-            loginViewModel.loginState.value.dilogeVisabitlity.not()
+        CheckDialog(
+            navController = navController,
+            visible = loginViewModel.loginState.value.dilogeVisabitlity
+        ) {
+            loginViewModel.loginState.value.dilogeVisabitlity = false
         }
     }
 }

@@ -14,11 +14,12 @@ class RemoteRepositoryImp @Inject constructor(
 ): Repository {
     override suspend fun login(userRequest: UserRequest): Resource<LoginResponse> {
      return try {
-         Resource.Success(LoginResponse(apiService.login(userRequest).body()!!.user))
+         val response = apiService.login(userRequest)
+         Resource.Success(LoginResponse(user = response.body()!!.user , status = response.body()!!.status))
      }catch (e:IOException){
-         Resource.Error("")
+         Resource.Error("IO Exception")
      }catch (e:HttpException){
-         Resource.Error("")
+         Resource.Error("HTTP Exception")
      }
     }
 

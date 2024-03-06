@@ -107,19 +107,19 @@ fun ConnectUs() {
             modifier = Modifier.padding(top = 20.dp , bottom = 14.dp , start = 10.dp , end = 10.dp).fillMaxWidth()
             ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_facebook), contentDescription = ""
+                painter = painterResource(id = R.drawable.facebook), contentDescription = ""
                 ,modifier = Modifier.size(30.dp).weight(1f)
             )
             Image(
-                painter = painterResource(id = R.drawable.ic_facebook), contentDescription = ""
+                painter = painterResource(id = R.drawable.whatsapp), contentDescription = ""
                 ,modifier = Modifier.size(30.dp).weight(1f)
             )
             Image(
-                    painter = painterResource(id = R.drawable.ic_facebook), contentDescription = ""
+                    painter = painterResource(id = R.drawable.linkedin), contentDescription = ""
                 ,modifier = Modifier.size(30.dp).weight(1f)
             )
             Image(
-            painter = painterResource(id = R.drawable.ic_facebook), contentDescription = ""
+            painter = painterResource(id = R.drawable.location), contentDescription = ""
                 ,modifier = Modifier.size(30.dp).weight(1f)
         )
         }

@@ -31,7 +31,7 @@ fun PropagandaCard(specialName: String) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            Text(text = specialName, fontSize = 16.sp, modifier = Modifier.padding(4.dp))
+            Text(text = specialName, fontSize = 20.sp, modifier = Modifier.padding(6.dp))
         }
     }
 }

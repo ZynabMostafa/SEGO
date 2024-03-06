@@ -16,6 +16,7 @@ import com.example.sego.presentation.ui.theme.basicColor
 @Composable
 fun CustomButton(
     text:String,
+    modifier:Modifier,
     onClick:()->(Unit)
 ){
     Button(

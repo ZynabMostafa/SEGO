@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.sego.R
-import com.example.sego.presentation.compoasble.CompanyCard
+import com.example.sego.presentation.compoasble.Companies
 import com.example.sego.presentation.compoasble.PropagandaCard
 import com.example.sego.presentation.compoasble.ListItem
 import com.example.sego.presentation.mainScreen.classes.Companies
@@ -66,10 +66,10 @@ fun HomeScreen(context: Context) {
         )
         LazyRow() {
             items(imagelist) { item1 ->
-                CompanyCard(imageList = item1)
+                Companies(imageList = item1)
             }
         }
-        LazyRow() {
+        LazyRow(modifier=Modifier.padding(end=10.dp)) {
             items(speciallist) { item ->
                 PropagandaCard(specialName = item)
             }

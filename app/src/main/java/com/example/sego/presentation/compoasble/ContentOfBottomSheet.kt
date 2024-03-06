@@ -25,11 +25,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sego.R
 import com.example.sego.presentation.ui.theme.basicColor
 
-
+@Preview(showBackground = true)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ContentOfBottomSheet() {
@@ -153,7 +154,7 @@ fun ContentOfBottomSheet() {
                     .padding(top = 6.dp, start = 40.dp, end = 20.dp, bottom = 60.dp),
                 trailingIcon = {
                     Image(
-                        painter = painterResource(id = R.drawable.map),
+                        painter = painterResource(id = R.drawable.location),
                         contentDescription = null
                     )
                 },

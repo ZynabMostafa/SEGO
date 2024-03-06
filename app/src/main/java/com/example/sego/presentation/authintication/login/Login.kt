@@ -75,7 +75,7 @@ fun Login(
 
         }
         Spacer(modifier = Modifier.height(30.dp))
-        CustomButton(text = "Login") {
+        CustomButton(text = "Login",modifier=Modifier.padding(bottom=10.dp)) {
             loginViewModel.login_(
                 UserRequest(
                     loginViewModel._email.value,
@@ -89,11 +89,11 @@ fun Login(
             loginViewModel.loginState.value.showErrorMesage = true
         }
 
-        Text(text = "Forgot Password?")
+        Text(text = "Forgot Password?", modifier = Modifier.padding(top=20.dp))
         HorizontalDivider(
             Modifier
                 .height(2.dp)
-                .width(115.dp)
+                .width(135.dp)
         )
         Spacer(modifier = Modifier.height(20.dp))
         Row {
@@ -116,7 +116,7 @@ fun Login(
             onClick = { loginViewModel.loginState.value.dilogeVisabitlity = true },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp, top = 50.dp, bottom = 50.dp)
+                .padding(start = 20.dp, end = 20.dp, top = 40.dp, bottom = 40.dp)
                 .clip(RoundedCornerShape(15.dp))
         ) {
             Text(text = "Signup")

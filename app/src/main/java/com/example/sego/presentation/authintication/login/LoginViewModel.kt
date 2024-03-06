@@ -22,31 +22,31 @@ class LoginViewModel @Inject constructor
 
 
 
-      fun login_ (userRequest: UserRequest){
-          viewModelScope.launch {
-              loginUseCase(userRequest).let { result ->
-                  when(result){
-                      is Resource.Error->{
+    fun login_ (userRequest: UserRequest){
+        viewModelScope.launch {
+            loginUseCase(userRequest).let { result ->
+                when(result){
+                    is Resource.Error->{
                         _loginState.value= LoginState(isLoading = false)
-                          _loginState.value = LoginState(error = result.message)
-                      }
-                      is Resource.Success ->{
-                          _loginState.value = LoginState(isLoading = false)
-                          _loginState.value = LoginState(value = result.data)
+                        _loginState.value = LoginState(error = result.message)
+                    }
+                    is Resource.Success ->{
+                        _loginState.value = LoginState(isLoading = false)
+                        _loginState.value = LoginState(value = result.data)
 
-                      }
+                    }
 
-                      is Resource.Loading ->{
-                          _loginState.value = LoginState(isLoading = true)
-                      }
-                  }
+                    is Resource.Loading ->{
+                        _loginState.value = LoginState(isLoading = true)
+                    }
+                }
 
-              }
-             }
-      }
-       fun setEmail(email:String){
-           _email.value = email
-       }
+            }
+        }
+    }
+    fun setEmail(email:String){
+        _email.value = email
+    }
     fun setPassword(password:String){
         _password.value=password
     }

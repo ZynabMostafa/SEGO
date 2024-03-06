@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.sego.presentation.mainScreen.MainSCreen
+import com.example.sego.presentation.mainScreen.MainScreen
 import com.example.sego.presentation.wellcomScreen.SplashViewModel
 import com.example.sego.presentation.ui.theme.SEGOTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
 
 
                     val screen = splashViewModel.startDestination.value
-                    MainSCreen(startDestination = screen)
+                    MainScreen(startDestination = screen)
                 }
             }
         }

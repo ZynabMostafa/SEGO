@@ -1,4 +1,4 @@
-package com.example.sego.navigation
+package com.example.sego.presentation.navigation
 
 sealed class AuthScreenRouts(val rout:String){
     object Login : MainScreenRouts(  "Login")

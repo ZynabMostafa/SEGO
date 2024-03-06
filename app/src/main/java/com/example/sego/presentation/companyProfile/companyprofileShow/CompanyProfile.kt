@@ -38,7 +38,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.sego.R
 import com.example.sego.presentation.companyProfile.contnectUs.ConnectUs
 import com.example.sego.presentation.companyProfile.projects.Projects
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 @Preview(showSystemUi = true)
 @OptIn(ExperimentalMaterial3Api::class)

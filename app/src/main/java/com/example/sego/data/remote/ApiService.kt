@@ -1,4 +1,4 @@
-package com.example.sego.data.remot
+package com.example.sego.data.remote
 
 import com.example.sego.data.dto.UserRequest
 import com.example.sego.data.dto.LoginResponseDto

@@ -1,4 +1,4 @@
-package com.example.sego.presentation.companyMainScreen.companyProfileScreen.composable
+package com.example.sego.presentation.compoasble
 
 
 import androidx.compose.foundation.clickable

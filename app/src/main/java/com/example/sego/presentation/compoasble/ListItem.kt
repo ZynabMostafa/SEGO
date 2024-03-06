@@ -24,7 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.sego.R
 import com.example.sego.presentation.mainScreen.classes.Companies
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @Composable

@@ -1,4 +1,4 @@
-package com.example.sego.presentation.companyMainScreen.companyProfileScreen
+package com.example.sego.presentation.companyMainScreen.Screens
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable
@@ -36,8 +36,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sego.R
-import com.example.sego.presentation.companyMainScreen.companyProfileScreen.composable.ContentOfBottomSheet
-import com.example.sego.presentation.companyMainScreen.companyProfileScreen.composable.CustomTextFieldWithIconProfile
+import com.example.sego.presentation.compoasble.ContentOfBottomSheet
+import com.example.sego.presentation.compoasble.CustomTextFieldWithIconProfile
 import com.example.sego.presentation.compoasble.ProfileImage
 import kotlinx.coroutines.launch
 

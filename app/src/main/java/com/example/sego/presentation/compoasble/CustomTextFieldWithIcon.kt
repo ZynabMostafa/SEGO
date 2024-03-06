@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,7 +34,7 @@ fun CustomTextFieldWithIcon(
         Icon(
             imageVector = icon, contentDescription = "lock",
             modifier = Modifier
-                .padding(top = 9.dp)
+                .padding(top = 8.dp)
                 .clip(RoundedCornerShape(15.dp, 0.dp, 0.dp, 15.dp))
                 .background(basicColor)
                 .padding(17.dp)

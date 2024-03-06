@@ -1,4 +1,4 @@
-package com.example.sego.ui.theme
+package com.example.sego.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

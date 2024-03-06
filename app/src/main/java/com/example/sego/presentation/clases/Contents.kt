@@ -1,10 +1,10 @@
-package com.example.sego.clases
+package com.example.sego.presentation.clases
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import com.example.sego.navigation.MainScreenRouts
+import com.example.sego.presentation.navigation.MainScreenRouts
 import com.example.sego.presentation.mainScreen.classes.BottomNavItem
 
 object Contents {

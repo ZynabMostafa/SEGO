@@ -1,6 +1,6 @@
 package com.example.sego.di
 
-import com.example.sego.data.remot.ApiService
+import com.example.sego.data.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

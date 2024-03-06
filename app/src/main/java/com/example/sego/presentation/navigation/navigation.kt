@@ -1,4 +1,4 @@
-package com.example.sego.navigation
+package com.example.sego.presentation.navigation
 
 import android.content.Context
 import androidx.compose.animation.ExperimentalAnimationApi

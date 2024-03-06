@@ -34,7 +34,7 @@ import androidx.navigation.NavController
 import com.example.sego.presentation.compoasble.CustomButton
 import com.example.sego.presentation.compoasble.CustomTextFieldWithIcon
 import com.example.sego.presentation.compoasble.HeaderImage
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @Composable

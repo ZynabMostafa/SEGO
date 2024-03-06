@@ -1,4 +1,4 @@
-package com.example.sego.navigation
+package com.example.sego.presentation.navigation
 
 object Graph {
     const val HOME = "Home"

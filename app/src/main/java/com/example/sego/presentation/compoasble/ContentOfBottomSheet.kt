@@ -1,4 +1,4 @@
-package com.example.sego.presentation.companyMainScreen.companyProfileScreen.composable
+package com.example.sego.presentation.compoasble
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -27,14 +27,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.sego.R
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ContentOfBottomSheet() {
 
-    var whatsapp by rememberSaveable {
+    var whatsApp by rememberSaveable {
         mutableStateOf(" ")
     }
     var facebook by rememberSaveable {
@@ -52,11 +52,11 @@ fun ContentOfBottomSheet() {
             horizontalArrangement = Arrangement.Center
         ) {
             TextField(
-                value = whatsapp,
+                value = whatsApp,
                 onValueChange = {
-                    whatsapp = it
+                    whatsApp = it
                 },
-                shape = RoundedCornerShape(26.dp),
+                shape = RoundedCornerShape(25.dp),
                 modifier = Modifier
                     .padding(top = 6.dp, start = 40.dp, end = 20.dp),
                 trailingIcon = {
@@ -174,7 +174,6 @@ fun ContentOfBottomSheet() {
         Spacer(modifier = Modifier.height(6.dp))
         Button(
             onClick = {
-                //    Toast.makeText(context, "Data Saved", Toast.LENGTH_SHORT).show()
 
             }, colors = ButtonDefaults.buttonColors(basicColor),
             modifier = Modifier

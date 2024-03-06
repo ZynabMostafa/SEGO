@@ -1,4 +1,4 @@
-package com.example.sego.ui.theme
+package com.example.sego.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

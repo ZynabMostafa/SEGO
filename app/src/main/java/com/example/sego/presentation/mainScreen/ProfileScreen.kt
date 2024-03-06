@@ -17,9 +17,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.sego.R
-import com.example.sego.navigation.AuthScreenRouts
-import com.example.sego.navigation.MainScreenRouts
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.navigation.AuthScreenRouts
+import com.example.sego.presentation.ui.theme.basicColor
 
 @Composable
 fun ProfileScreen(navController: NavController) {
@@ -35,10 +34,7 @@ fun ProfileScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(30.dp))
         Button(
             onClick = {
-                navController.navigate(AuthScreenRouts.Login.rout) {
-                    popUpTo(MainScreenRouts.Home.rout)
-                    launchSingleTop
-                }
+                navController.navigate(AuthScreenRouts.Login.rout)
             },
             colors = ButtonDefaults.buttonColors(basicColor)
         ) {

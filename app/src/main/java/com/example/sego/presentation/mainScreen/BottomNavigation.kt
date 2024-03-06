@@ -14,8 +14,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.sego.clases.Contents
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.clases.Contents
+import com.example.sego.presentation.ui.theme.basicColor
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {

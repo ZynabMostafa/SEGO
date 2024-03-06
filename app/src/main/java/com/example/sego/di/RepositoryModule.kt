@@ -1,8 +1,8 @@
 package com.example.sego.di
 
-import com.example.sego.data.Repository.remot.RemoteRepositoryImp
-import com.example.sego.data.remot.ApiService
-import com.example.sego.domain.reposatory.remot.RemoteRepository
+import com.example.sego.data.Repository.AuthenticationRepository
+import com.example.sego.data.remote.ApiService
+import com.example.sego.domain.reposatory.Repository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +15,7 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideRemoteRepository(apiService: ApiService): RemoteRepository {
-        return RemoteRepositoryImp(apiService)
+    fun provideRemoteRepository(apiService: ApiService): Repository {
+        return AuthenticationRepository(apiService)
     }
 }

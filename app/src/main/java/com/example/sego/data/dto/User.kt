@@ -18,7 +18,7 @@ data class User(
     @SerializedName("name")
     val name: String,
     @SerializedName("phone")
-    val phone: String,
+    val phoneNumber: String,
     @SerializedName("updated_at")
     val updatedAt: String
 )

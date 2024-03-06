@@ -1,12 +1,11 @@
 package com.example.sego.presentation.authintication.login
 
-import com.example.sego.data.dto.User
-import com.example.sego.domain.model.loginResponse
+import com.example.sego.domain.model.LoginResponse
 
 data class LoginState(
     val error: String = "",
-    val value: User =  User(
-            "", "", "", "", 0, "", "", "", ""
-        )
-    , val isLoading: Boolean = false
+    val value: LoginResponse? = null
+    , var isLoading: Boolean = false,
+    var dilogeVisabitlity : Boolean = false,
+    var showErrorMesage : Boolean = false
 )

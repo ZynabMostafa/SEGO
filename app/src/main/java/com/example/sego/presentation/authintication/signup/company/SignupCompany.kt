@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.ClickableText
@@ -40,7 +41,7 @@ import com.example.sego.presentation.compoasble.CustomButton
 import com.example.sego.presentation.compoasble.CustomTextFieldWithIcon
 import com.example.sego.presentation.compoasble.HeaderImage
 import com.example.sego.presentation.compoasble.Pick
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @Composable
@@ -95,8 +96,8 @@ fun SignupCompany(navController: NavController,
             label = "Password"
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
-        CustomButton(text = "Sign up") {
+
+        CustomButton(text = "Sign up",modifier=Modifier.padding(top=10.dp)) {
              Toast.makeText(context, "you are signed up", Toast.LENGTH_LONG).show()
         }
         Row(horizontalArrangement = Arrangement.Start) {

@@ -12,16 +12,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.sego.R
-import com.example.sego.navigation.AuthScreenRouts
+import com.example.sego.presentation.navigation.AuthScreenRouts
 
 @Composable
 fun CheckDialog(
     navController: NavController,
-    visable: Boolean = false,
-    onDismis: () -> Unit
+    visible: Boolean = false,
+    onDismiss: () -> Unit
 ) {
-    if (visable) {
-        AlertDialog(onDismissRequest = { onDismis() },
+    if (visible) {
+        AlertDialog(onDismissRequest = { onDismiss() },
             confirmButton = {
                 OutlinedButton(onClick = {
                     navController.navigate(AuthScreenRouts.SignUpUser.rout) {

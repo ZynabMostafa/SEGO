@@ -32,7 +32,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 @Preview(showSystemUi = true)
 @Composable

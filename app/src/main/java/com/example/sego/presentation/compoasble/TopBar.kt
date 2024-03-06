@@ -18,7 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.sego.clases.Contents
+import com.example.sego.presentation.clases.Contents
 import com.example.sego.R
 
 @OptIn(ExperimentalMaterial3Api::class)

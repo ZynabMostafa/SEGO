@@ -5,14 +5,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import com.example.sego.presentation.compoasble.TopBar
-import com.example.sego.navigation.MainScreenNavigation
-import com.example.sego.presentation.wellcomScreen.SplashViewModel
-import javax.inject.Inject
+import com.example.sego.presentation.navigation.MainScreenNavigation
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainSCreen(startDestination:String){
+fun MainScreen(startDestination:String){
 
 
     val navController = rememberNavController()

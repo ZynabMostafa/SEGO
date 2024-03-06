@@ -4,7 +4,6 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -15,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.sego.ui.theme.basicColor
+import com.example.sego.presentation.ui.theme.basicColor
 
 
 @Composable
@@ -32,7 +31,7 @@ fun PropagandaCard(specialName: String) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            Text(text = specialName, fontSize = 16.sp, modifier = Modifier.padding(4.dp))
+            Text(text = specialName, fontSize = 20.sp, modifier = Modifier.padding(6.dp))
         }
     }
 }

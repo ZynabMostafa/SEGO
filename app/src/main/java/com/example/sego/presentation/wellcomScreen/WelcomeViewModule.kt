@@ -2,7 +2,7 @@ package com.example.sego.presentation.wellcomScreen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.sego.data.Repository.local.DataStoreRepo
+import com.example.sego.data.Repository.DataStoreRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

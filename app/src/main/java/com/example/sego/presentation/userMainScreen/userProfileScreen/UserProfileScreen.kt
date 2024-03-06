@@ -21,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.sego.presentation.companyMainScreen.companyProfileScreen.composable.CustomTextFieldWithIconProfile
+import com.example.sego.presentation.compoasble.CustomTextFieldWithIconProfile
 import com.example.sego.presentation.compoasble.ProfileImage
 
 
